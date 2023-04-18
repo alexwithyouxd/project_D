@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class barrier : MonoBehaviour
 {
+    public float gg = 0.0001f;
     public float startValue;
     public float endValue;
     public float lerpTime = 1f;
@@ -20,6 +21,7 @@ public class barrier : MonoBehaviour
     {
         if (triggered)
         {
+
             timeElapsed += Time.deltaTime;
             currentValue = Mathf.Lerp(startValue, endValue, timeElapsed / lerpTime);
             Vector3 currentPos = barrier1.transform.position;
@@ -30,17 +32,20 @@ public class barrier : MonoBehaviour
             barrier2.transform.position = currentpos2;
         }
 
-        Vector3 cp = transform.position;
+        //Vector3 cp = transform.position;
+
+
         
 
-        if (cp.y == -5f)
-        {
-            triggered = true;
-
-            
-        }
-        
     }
 
-   
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            triggered = true;
+        }
+    }
+
+
 }
