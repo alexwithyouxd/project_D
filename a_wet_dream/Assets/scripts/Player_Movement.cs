@@ -7,23 +7,27 @@ public class Player_Movement : MonoBehaviour
     
     public float speed;
     public float jumpforce;
-    public float move;
+    public float groundcheckradius;
 
-    
+
+    [SerializeField] private float move;
     [SerializeField] private bool isgrounded;
     
     public Transform groundcheck;
-    public float groundcheckradius;
+    
     public LayerMask whatisground;
 
 
     public Rigidbody2D rb;
+    public Animator anim;
 
    
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        
     }
 
     
@@ -34,18 +38,18 @@ public class Player_Movement : MonoBehaviour
     {
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
-
+        anim.SetFloat("move", Mathf.Abs(move));
 
        
         //groundcheck
         isgrounded = Physics2D.OverlapCircle(groundcheck.position, groundcheckradius, whatisground);
+
 
         if (Input.GetKeyDown(KeyCode.Space) && isgrounded)
         {
             rb.velocity = Vector2.up * jumpforce;
         }
 
-        
 
         //flip
         flip();
