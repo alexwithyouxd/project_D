@@ -706,11 +706,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackcooldown: 1
   range: -0.93
-  damage: 2
+  damage: 22
   cooldowntimer: Infinity
   playerlayer:
     serializedVersion: 2
     m_Bits: 256
+  colliderDistance: 0
   bc: {fileID: 662339920}
 --- !u!1 &939341536
 GameObject:
@@ -956,6 +957,7 @@ GameObject:
   - component: {fileID: 1333912435}
   - component: {fileID: 1333912436}
   - component: {fileID: 1333912437}
+  - component: {fileID: 1333912438}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -1161,6 +1163,20 @@ MonoBehaviour:
   enemieslayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1333912438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333912429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cedb7b5966591d479624f779a30ea4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 100
+  currenthealth: 0
 --- !u!1 &1445844485
 GameObject:
   m_ObjectHideFlags: 0
