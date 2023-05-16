@@ -40,9 +40,9 @@ public class enemy_attack : MonoBehaviour
         foreach (Collider2D enemy in hitenemies)
         {
             
-            //Debug.Log("player dealt damage");
+            Debug.Log("player dealt damage");
             //enemy.GetComponent<enemy>().takedamage(20);
-            InvokeRepeating("debu", 5f, 2f);
+           // InvokeRepeating("debu", 5f, 2f);
         }
     }
 

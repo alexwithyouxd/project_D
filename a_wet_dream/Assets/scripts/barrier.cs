@@ -38,14 +38,13 @@ public class barrier : MonoBehaviour
         
 
     }
-
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
-        {
+        
             triggered = true;
-        }
+        
     }
+
 
 
 }
