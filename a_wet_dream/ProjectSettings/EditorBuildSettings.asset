@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/options.unity
     guid: 177f0977b45d1e14eb4b2a5054ccff32
+  - enabled: 1
+    path: Assets/Scenes/cutscene2.unity
+    guid: 2d813bb96e32fea4f864baf375295af3
+  - enabled: 1
+    path: Assets/Scenes/research lab level.unity
+    guid: 8d187779b14a9384e9d8a7380c499a5e
   m_configObjects: {}
