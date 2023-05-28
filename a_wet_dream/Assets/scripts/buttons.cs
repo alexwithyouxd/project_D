@@ -20,16 +20,24 @@ public class buttons : MonoBehaviour
 
     public void Options()
     {
-        //opens options menu or panel
+        SceneManager.LoadScene("options");
+
     }
 
     public void extras()
     {
-        //should open credits&extras scene
+        SceneManager.LoadScene("extras");
+
     }
 
     public void exit()
     {
         SceneManager.LoadScene("exit");
+    }
+
+    public void mainmenu()
+    {
+        SceneManager.LoadScene("main menu");
+
     }
 }
